@@ -1,0 +1,1 @@
+export const a_author = document.querySelector('#author_ref')
