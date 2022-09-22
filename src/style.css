@@ -78,7 +78,7 @@ meter {
 }
 
 body{
-  background-color: rgb(17, 30, 43);
+  background-color: hsl(210, 43%, 12%);
   background-position: center;
   background-size: cover;
   background-blend-mode: exclusion;

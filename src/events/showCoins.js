@@ -7,6 +7,7 @@ const COINS = ['bitcoin', 'dogecoin', 'ethereum', 'litecoin'];
 export default async function showCoins(){
   try {
     const coins = await Promise.all(COINS.map(coin => getDataCoin(coin)));
+    coins.sort((a,b) => a.market_cap_rank-b.market_cap_rank)
     d_crypto.innerHTML += coins.map(coin => Coin(coin)).join('')
   } catch (error) {
     console.error(`${error.name}: ${error.message}: ${error}`)

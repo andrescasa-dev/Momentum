@@ -18,7 +18,7 @@ export default async function getBackgroundImage(){
 
 
 async function getImage(){
-    const response = await fetch(`${UNSPLASH_BASE_URL}/Sphotos/random/?orientation=landscape&&query=night&&client_id=${UNSPLASH_ACCESS_KEY}`)
+    const response = await fetch(`${UNSPLASH_BASE_URL}/photos/random/?orientation=landscape&&query=night&&client_id=${UNSPLASH_ACCESS_KEY}`)
     if(!response.ok) throw new Error('Incorrect URL')
     return await response.json();
 
