@@ -84,3 +84,7 @@ body{
   background-blend-mode: exclusion;
   filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.254));
 }
+
+.some{
+  background-color: #3d3d3d21;
+}
