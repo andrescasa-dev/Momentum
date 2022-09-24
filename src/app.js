@@ -1,4 +1,4 @@
-import getBackgroundImage from "./events/getBackgroundImage.js";
+import getBackgroundImage from "./events/ShowBackground.js";
 import showCoins from "./events/showCoins.js";
 import ShowCurrentTime from "./events/showCurrentTime.js";
 import showWeather from "./events/showWeather.js";

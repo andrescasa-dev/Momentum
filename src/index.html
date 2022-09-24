@@ -9,18 +9,17 @@
   <script type="module" src="app.js" defer></script>
   <title>Momentum</title>
 </head>
-<body class="flex p-4 flex-col text-3xl justify-between h-screen text-white">
-  <header class="flex justify-between gap-4">
+<body class="relative grid items-center justify-center h-screen text-white">
+  <header class="absolute top-0 flex justify-between items-start w-screen p-4 gap-4">
     <div id="crypto_list" class=" grid grid-cols-[1fr_repeat(3,2fr)] gap-2 items-center text-xl">
     </div>
-    <div id="weather" class="grid text-right">
+    <div id="weather" class="grid text-3xl text-right">
     </div>
   </header>
-  <main class="self-center ">
-    <h1 id="time" class="text-8xl font-bold"></h1>
+  <main id="time" class="self-center">
   </main>
-  <footer class="flex items-end">
-    <a id="author_ref" href="#" class="capitalize cursor-pointer underline underline-offset-4"></a>    
+  <footer class="absolute bottom-0 flex items-end p-4">
+    <div id="author"></div>    
   </footer>
 </body>
 </html>

@@ -1,6 +1,8 @@
-import { p_time } from "../utils/view.js";
+import Time from "../components/Time.js";
+import { d_time } from "../utils/view.js";
 
 export default function ShowCurrentTime(){  
   const date = new Date();
-  p_time.textContent = date.toLocaleTimeString('en-us', {timeStyle: "medium"})
+  const time = date.toLocaleTimeString('en-us', {timeStyle: "short"})
+  d_time.innerHTML = Time(time)
 }
