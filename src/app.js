@@ -6,9 +6,9 @@ import showWeather from "./events/showWeather.js";
 class App{
   constructor(){
     this.listeners();
-    // setInterval(ShowCurrentTime,1000);
-    // getBackgroundImage();
-    // showCoins();
+    setInterval(ShowCurrentTime,1000);
+    getBackgroundImage();
+    showCoins();
     showWeather();
   }
   listeners(){

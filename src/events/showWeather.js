@@ -1,8 +1,12 @@
+import Weather from "../components/Weather.js";
+import { OPEN_WEATHER_BASE_URL } from "../utils/constants.js";
+import { d_weather } from "../utils/view.js";
+
 export default async function showWeather(){
   try {
     const position = await getCoords();
-    const weather = await getWeather(position)
-    console.log(weather)
+    const weatherData = await getWeather(position)
+    d_weather.innerHTML = Weather(weatherData);
   } catch (error) {
     console.error(error)
   }
@@ -17,7 +21,7 @@ function getCoords(){
 
 
 async function getWeather(position){
-  const response = await fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial`)
+  const response = await fetch(`${OPEN_WEATHER_BASE_URL}/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`)
   const data = response.json();
   return data;
 }
